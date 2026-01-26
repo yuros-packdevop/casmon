@@ -117,5 +117,6 @@ function casmon_deploy() {
 function casmon() {
   casmon_dialog $1 $2
 }
+casmon
 
 
