@@ -59,10 +59,10 @@ function casmon_master() {
     return
   fi
   
-  casmon_creates_takers
-  casmon_master_takers_ubuntu
-  casmon_creates_update
-  casmon_creates_delete
+casmon_master_takers
+casmon_master_takers_ubuntu
+casmon_creates_update
+casmon_creates_delete
 }
 
 
