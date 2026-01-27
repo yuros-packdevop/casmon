@@ -29,10 +29,34 @@ function casmon_master_takers() {
 
 #-[2][1](1) download qcow ubuntu
 function casmon_master_takers_ubuntu() {
-  if [[ $option_master != "1" ]]; then
+  if [[ $option_master != "-lu" ]]; then
   return
   fi
   echo "master download ubuntu"
+}
+
+#-[2][1](2) download qcow debian
+function casmon_master_takers_debian() {
+  if [[ $option_master != "-ld" ]]; then
+  return
+  fi
+  echo "master download debian"
+}
+
+#-[2][1](3) download qcow fedora
+function casmon_master_takers_fedora() {
+  if [[ $option_master != "-lf" ]]; then
+  return
+  fi
+  echo "master download fedora"
+}
+
+#-[2][1](3) download qcow arch
+function casmon_master_takers_arch() {
+  if [[ $option_master != "-la" ]]; then
+  return
+  fi
+  echo "master download arch"
 }
 
 #-[2][2] update qcow
@@ -61,8 +85,11 @@ function casmon_master() {
   
 casmon_master_takers
 casmon_master_takers_ubuntu
-casmon_creates_update
-casmon_creates_delete
+casmon_master_takers_debian
+casmon_master_takers_fedora
+casmon_master_takers_arch
+casmon_master_update
+casmon_master_delete
 }
 
 
