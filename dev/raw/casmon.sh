@@ -21,12 +21,19 @@ function casmon_dialog() {
 #-[1] qcow management
 #-[2][1] download qcow
 function casmon_master_takers() {
-   if [[ $options_master != "master_takers" ]]; then
+   if [[ $options_master != "-l" ]]; then
     return
     fi
-  echo "master download"
+  echo "list master"
 }
 
+#-[2][1](1) download qcow ubuntu
+function casmon_master_takers_ubuntu() {
+  if [[ $option_master != "1" ]]; then
+  return
+  fi
+  echo "master download ubuntu"
+}
 
 #-[2][2] update qcow
 function casmon_master_update() {
@@ -53,6 +60,7 @@ function casmon_master() {
   fi
   
   casmon_creates_takers
+  casmon_master_takers_ubuntu
   casmon_creates_update
   casmon_creates_delete
 }
