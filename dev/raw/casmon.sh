@@ -3,9 +3,9 @@
 ## main process for casmon
 ## revision by null @ 26
 #--[1] option dialog
-source lib/dialog.sh
+source lib/dial.sh
 #-[2] qcow management
-source lib/master.sh
+source lib/mast.sh
 #-[3] host management
 source lib/host.sh
 
