@@ -72,12 +72,12 @@ function casmon_master() {
     return
   fi
   
-casmon_master_takers
-casmon_master_takers_ubuntu
-casmon_master_takers_debian
-casmon_master_takers_fedora
-casmon_master_takers_arch
-casmon_master_verify
-casmon_master_update
-casmon_master_delete
+    casmon_master_takers
+    casmon_master_takers_ubuntu
+    casmon_master_takers_debian
+    casmon_master_takers_fedora
+    casmon_master_takers_arch
+    casmon_master_verify
+    casmon_master_update
+    casmon_master_delete
 }
