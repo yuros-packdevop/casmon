@@ -60,18 +60,26 @@ function casmon_master_takers_arch() {
   echo "master download arch"
 }
 
-#-[2][2] update qcow
+#-[2][2] verify qcow
+function casmon_master_verify() {
+   if [[ $options_master != "-ve" ]]; then
+    return
+    fi
+  echo "master terverifikasi"
+}
+
+#-[2][3] update qcow
 function casmon_master_update() {
-   if [[ $options_master != "master_update" ]]; then
+   if [[ $options_master != "-up" ]]; then
     return
     fi
   echo "master update"
 }
 
-#-[2][3] delete qcow
+#-[2][4] delete qcow
 function casmon_master_delete() {
 
-   if [[ $options_master != "master_delete" ]]; then
+   if [[ $options_master != "-de" ]]; then
     return
     fi
   echo "master delete"
@@ -89,6 +97,7 @@ casmon_master_takers_ubuntu
 casmon_master_takers_debian
 casmon_master_takers_fedora
 casmon_master_takers_arch
+casmon_master_verify
 casmon_master_update
 casmon_master_delete
 }
