@@ -11,8 +11,8 @@ source lib/host.sh
 
 
 function casmon() {
-  casmon_dialog $1 $2 $3
+  casmon_dialog $1 $2
 }
-casmon $1 $2 $3
+casmon $1 $2
 
 

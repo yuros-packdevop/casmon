@@ -3,31 +3,39 @@
 #-[3](1) create host
 function casmon_deploy_create() {
 
-   if [[ $options_deploy != "deploy_create" ]]; then
+   if [[ $options_deploy != "create" ]]; then
     return
     fi
   echo "deploy create"
 }
 
+#-[3](2) verifikasi host
+function casmon_deploy_verifi() {
 
-#-[3](2) starts host
+   if [[ $options_deploy != "verifi" ]]; then
+    return
+    fi
+  echo "deploy verifikasi"
+}
+
+#-[3](3) starts host
 function casmon_deploy_starts() {
- if [[ $options_deploy != "deploy_starts" ]]; then
+ if [[ $options_deploy != "start" ]]; then
     return
     fi
 echo "deploy start"
 }
 
-#-[3](3) snaper host
+#-[3](4) snaper host
 function casmon_deploy_snaper() {
-  if [[ $options_deploy != "deploy_snaper" ]]; then
+  if [[ $options_deploy != "snap" ]]; then
     return
     fi
   echo "deploy snaper"
 }
-#-[3](4) delete host
+#-[3](5) delete host
 function casmon_deploy_delete() {
-if [[ $options_deploy != "deploy_delete" ]]; then
+if [[ $options_deploy != "delete" ]]; then
     return
     fi
 echo "deploy delete"
@@ -48,6 +56,7 @@ function casmon_deploy() {
     return
   fi
   casmon_deploy_create
+  casmon_deploy_verifi
   casmon_deploy_update
   casmon_deploy_delete
   casmon_deploy_snaper
