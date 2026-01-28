@@ -52,7 +52,7 @@ function casmon_deploy_delete() {
 
 #-[3](7) update host
 function casmon_deploy_update() {
-  if [[ $options_deploy != "deploy_update" ]]; then
+  if [[ $options_deploy != "update" ]]; then
     return
     fi
     
