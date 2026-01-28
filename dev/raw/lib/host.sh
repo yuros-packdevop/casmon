@@ -23,25 +23,34 @@ function casmon_deploy_starts() {
  if [[ $options_deploy != "start" ]]; then
     return
     fi
-echo "deploy start"
+    echo "deploy start"
 }
 
-#-[3](4) snaper host
+#-[3](4) list host
+function casmon_deploy_listin() {
+  if [[ $options_deploy != "list" ]]; then
+    return
+    fi
+  echo "deploy list"
+}
+
+#-[3](5) snaper host
 function casmon_deploy_snaper() {
   if [[ $options_deploy != "snap" ]]; then
     return
     fi
   echo "deploy snaper"
 }
-#-[3](5) delete host
+
+#-[3](6) delete host
 function casmon_deploy_delete() {
-if [[ $options_deploy != "delete" ]]; then
+  if [[ $options_deploy != "delete" ]]; then
     return
     fi
-echo "deploy delete"
+  echo "deploy delete"
 }
 
-#-[3](5) update host
+#-[3](7) update host
 function casmon_deploy_update() {
   if [[ $options_deploy != "deploy_update" ]]; then
     return
@@ -57,8 +66,9 @@ function casmon_deploy() {
   fi
   casmon_deploy_create
   casmon_deploy_verifi
-  casmon_deploy_update
-  casmon_deploy_delete
-  casmon_deploy_snaper
+  casmon_deploy_listin
   casmon_deploy_starts
+  casmon_deploy_snaper
+  casmon_deploy_delete
+  casmon_deploy_update
 }
