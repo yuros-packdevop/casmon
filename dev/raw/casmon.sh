@@ -38,7 +38,7 @@ function casmon_master_takers_ubuntu() {
 
 #-[2][1](2) download qcow debian
 function casmon_master_takers_debian() {
-  if [[ $options_master_os!= "-de" ]]; then
+  if [[ $options_master_os != "-de" ]]; then
   return
   fi
   echo "master download debian"
@@ -79,7 +79,7 @@ function casmon_master_update() {
 #-[2][4] delete qcow
 function casmon_master_delete() {
 
-   if [[ $options_master != "-de" ]]; then
+   if [[ $options_master != "-del" ]]; then
     return
     fi
   echo "master delete"
